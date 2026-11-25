@@ -1,0 +1,20 @@
+export const stages = ['Draft', 'Needs approval', 'Approved', 'Scheduled', 'Published'] as const;
+export type Stage = typeof stages[number];
+export const workStates = ['Active', 'Completed', 'Idea'] as const;
+export type WorkState = typeof workStates[number];
+export const projectIds = ['reclaim', 'social', 'chronicles', 'seed-smoke', 'city', 'research', 'operations'] as const;
+export type ProjectId = typeof projectIds[number];
+export type Item = {
+  id: string; title: string; project: ProjectId; kind: 'Post'|'Task'|'Brief'|'Decision'|'Video'|'Story'|'Idea';
+  channel: string; workState: WorkState; stage: Stage; priority: 'Now'|'Next'|'Later'; content: string;
+  summary: string; owner: string; dueDate: string; plannedSlot: string; postKey: string; bufferId: string;
+  scheduledAt: string; publicationUrl: string; sourceUrl: string; sourceLabel: string; sourceKey: string;
+  notes: string; media: string; alt: string; approvedAt: string; approvalNote: string;
+  createdAt: string; updatedAt: string; revision: number;
+};
+export type Activity = { id: string; itemId: string; message: string; createdAt: string };
+export type Check = {id: string; title: string; detail: string; done: boolean};
+export type Metrics = {visits: number|null; scans: number|null; reclaims: number|null; recoveredSol: number|null; feesSol: number|null; costsUsd: number|null; evidence: string; observedOn: string};
+export type LaunchState = {checks: Check[]; metrics: Metrics; revision: number};
+export type HubState = {items: Item[]; activity: Activity[]; launch: LaunchState; snapshotAt: string};
+export type Template = {id:string; name:string; project:ProjectId; kind:Item['kind']; channel:string; description:string; content:string; instructions:string};

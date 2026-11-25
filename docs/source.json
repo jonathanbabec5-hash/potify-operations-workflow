@@ -1,0 +1,7 @@
+{
+  "project": "POTIFY Operations Workflow",
+  "kind": "Public approval-state library",
+  "source": "potify-operations at `bc14edd67ff70bff6666dac0345aee60b321ead4`. Original state transitions and tests. No imported items, connection identifiers, records or credentials.",
+  "scope": "The private operations app, imported tasks, comments and production publishing records stay separate.",
+  "prepared": "2026-11-25"
+}
