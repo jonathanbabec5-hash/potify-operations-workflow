@@ -2,6 +2,14 @@
 
 [Complete repository directory tree](docs/DIRECTORY.md)
 
+## What exactly did the editor approve?
+
+Change a single word after a post is approved and a different piece of writing may go out under somebody’s name. This little workflow takes that ordinary editorial concern seriously enough to put it in code.
+
+Read the [state transitions](lib/workflow.ts) beside the [seven workflow tests](tests/workflow.test.mjs). Watch for three different decisions: accepting a particular version, recording an actual schedule and recording publication evidence. A time typed into a form satisfies none of them by itself.
+
+Take one approved fixture and change material copy while keeping its time. Follow its review state and explain which evidence would let it advance again. A useful contribution is a small example an editor can read aloud and an engineer can reproduce.
+
 **Public approval-state library.** Let an editor prove the difference between a reviewed draft and a verified publication.
 
 ### Setup and usage
