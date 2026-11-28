@@ -1,5 +1,13 @@
 # POTIFY Operations Workflow
 
+## Find your way in
+
+| If you are… | Start here | Try this |
+| --- | --- | --- |
+| An editor | [Read the workflow question](#what-exactly-did-the-editor-approve) | See why an approved version and a changed draft are different. |
+| A developer | [Inspect state transitions](lib/workflow.ts) | Trace review, scheduling evidence and publication states. |
+| A tester | [Run the synthetic tests](#setup-and-usage) | Follow what happens when approved copy changes. |
+
 [Complete repository directory tree](docs/DIRECTORY.md)
 
 ## What exactly did the editor approve?
